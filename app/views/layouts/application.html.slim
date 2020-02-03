@@ -5,6 +5,7 @@ html lang="ja"
       = full_title(yield(:title))
     = render "layouts/head"
   body
-    = render "header"
+    = render "layouts/header"
     = yield
+    = render "layouts/footer"
     = render "lauouts/jquery_bootstrap"
