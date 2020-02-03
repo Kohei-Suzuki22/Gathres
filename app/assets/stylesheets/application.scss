@@ -1,10 +1,10 @@
 @import 'bootstrap';
 
+
+
+
 /* common */
 
-body{
-  padding-top: 60px;
-}
 
 section{
   overflow: auto;
@@ -47,4 +47,19 @@ h2{
 p{
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+
+/* ホーム画面 */
+.main{
+  // margin-top: -20px;
+  margin-bottom: 30px;
+  height: 320px;
+  background: image-url("43047b1c6aa225ba0cfab8b8a7edbc89_s.jpg") center center no-repeat;
+  background-size: 50%;
+  color: rgba(0,0,0,0.6);
+  line-height: 300px;
+  font-size: 20px;
+
+
 }
