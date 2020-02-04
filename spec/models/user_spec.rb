@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
 
-  let(:user){User.new(name:"user", email: "user@example.com", password_digest:"password")}
+  let(:user){User.new(name:"user", email: "user@example.com", password: "password", password_confirmation: "password")}
 
   describe "check valid user" do
 
@@ -82,8 +82,24 @@ RSpec.describe User, type: :model do
         user.save
         assert_equal mixed_case_email.downcase, user.reload.email
       end
+    end
 
+    describe "validates password" do
 
+      it "should be present (nonblank)" do
+        user.password = user.password_confirmation = "  " * 6
+        expect(user).to be_invalid
+      end
+
+      it "should have a minimum length" do
+        user.password = user.password_confirmation = "a" * 5
+        expect(user).to be_invalid
+      end
+
+      it "should be valid" do
+        user.password = user.password_confirmation = "a" * 6
+        expect(user).to be_valid
+      end
     end
 
 
