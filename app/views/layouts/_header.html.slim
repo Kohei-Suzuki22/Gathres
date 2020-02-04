@@ -8,11 +8,12 @@ header
         li.nav-item
           = link_to "ホーム", root_path, class:"nav-link"
         li.nav-item
-          a.nav-link href="#" 新規ユーザー
+          = link_to "新規ユーザー", signup_path, class:"nav-link"
         li.nav-item
           a.nav-link href="#" ログイン
         li.nav-item
           a.nav-link href="#" ユーザー
+          / = link_to "ユーザー", users_path, class:"nav-link"
         li.nav-item.dropdown
           a.nav-link.dropdown-toggle#navbarDropdown href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" マイアカウント
           .dropdown-menu aria-labelledby="navbarDropdown"
