@@ -1,5 +1,4 @@
 require 'rails_helper'
-include ApplicationHelper
 
 RSpec.feature "StaticPages", type: :feature do
 
