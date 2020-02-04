@@ -9,9 +9,7 @@ RSpec.feature "StaticPages", type: :feature do
     end
 
     describe "title" do
-      it "Gathers : Homeになること" do
-        expect(page).to have_title(full_title("Home"))
-      end
+      it { expect(page).to have_title(full_title("Home"))}
     end
     describe "body" do
       it { expect(page).to have_css("h1", text: "発想を発信しよう") }
