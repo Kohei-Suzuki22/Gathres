@@ -1,12 +1,12 @@
 header
   nav.navbar.navbar-fixed-top.navbar-light.navbar-expand-lg.bg-light
-    a.navbar-brand href="#" Gathers
+    = link_to "Gathers", root_path, class: "navbar-brand"
     button.navbar-toggler type="button" data-toggle="collapse" data-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="ナビゲーションの切り替え"
       span.navbar-toggler-icon
     .collapse.navbar-collapse#Navbar
       ul.navbar-nav.ml-auto
         li.nav-item
-          a.nav-link href="#" ホーム
+          = link_to "ホーム", root_path, class:"nav-link"
         li.nav-item
           a.nav-link href="#" 新規ユーザー
         li.nav-item
