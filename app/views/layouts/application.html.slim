@@ -6,6 +6,7 @@ html lang="ja"
     = render "layouts/head"
   body
     = render "layouts/header"
-    = yield
-    = render "layouts/footer"
+    .container
+      = yield
+      = render "layouts/footer"
     = render "layouts/jquery_bootstrap"
