@@ -1,1 +1,23 @@
 - provide(:title, "Signup")
+
+h1 新規登録
+
+.row
+  .col-md-6.offset-md-3
+    = form_with(model: @user, url: signup_path, local: true) do |f|
+
+      = render "shared/error_messages", model: f.object
+
+      = f.label :name, "名前"
+      = f.text_field :name, class:"form-control"
+
+      = f.label :email, "メールアドレス"
+      = f.email_field :email, class:"form-control", placeholder:"user@example.com"
+
+      = f.label :password, "パスワード"
+      = f.password_field :password, class:"form-control"
+
+      = f.label :password_confirmation, "パスワード(確認)"
+      = f.password_field :password_confirmation, class:"form-control"
+
+      = f.submit "登録", class:"btn btn-primary"
